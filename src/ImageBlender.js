@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import Cropper from "react-easy-crop";
-import image from "./frame.png";
+import image from "./dp_frame.png";
 
 function ImageBlender() {
   const [userImage, setUserImage] = useState(null);
@@ -103,14 +103,13 @@ function ImageBlender() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
-        backgroundColor: "#f0f8ff", // Light blue background
-        color: "#333", // Dark text color
+        minHeight: "100vh",
+        backgroundColor: "#f8f9fa",
+        color: "#333"
       }}
     >
-      <h1 style={{ marginBottom: "10px", color: "#2c3e50" }}>Join our campaign</h1>
-      <h3 style={{ marginBottom: "20px", color: "#34495e" }}>Blend your image with ours</h3> 
-
+      <h2 style={{ marginBottom: "10px", color: "#1a472a", textAlign: "center" }}>Be Part of This Sacred Gathering</h2>
+      <p style={{ marginBottom: "20px", color: "#666", fontSize: "1.2rem", textAlign: "center", maxWidth: "600px", lineHeight: "1.6" }}>Create your spiritual profile picture and join thousands of believers in this blessed night of Ramadan. Together, let's spread the message of peace and unity.</p>
       <div
         style={{
           position: "relative",
@@ -124,10 +123,10 @@ function ImageBlender() {
           fontSize: "20px",
           fontWeight: "bold",
           textShadow: "1px 1px 2px black",
-          border: "1px solid #2980b9", // Removed border
-          // borderRadius: "15px", // Rounded corners
-          overflow: "hidden", // Ensures the image doesn't overflow
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Subtle shadow
+          border: "none",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 4px 6px rgba(0,0,0,0.05)"
         }}
         onClick={handleSquareClick}
       >
@@ -180,21 +179,21 @@ function ImageBlender() {
       <button
         onClick={handleDownload}
         style={{
-          backgroundColor: "#3498db", // Blue background
-          border: "none", // Remove border
-          color: "white", // White text
-          padding: "15px 32px", // Padding
-          textAlign: "center", // Centered text
-          textDecoration: "none", // Remove underline
-          display: "inline-block", // Inline-block display
-          fontSize: "16px", // Font size
-          margin: "20px 2px", // Margin
-          cursor: "pointer", // Pointer cursor on hover
-          borderRadius: "12px", // Rounded corners
-          transition: "background-color 0.3s", // Smooth transition
+          backgroundColor: "#1a472a",
+          border: "none",
+          color: "white",
+          padding: "15px 32px",
+          textAlign: "center",
+          textDecoration: "none",
+          display: "inline-block",
+          fontSize: "16px",
+          margin: "20px 2px",
+          cursor: "pointer",
+          borderRadius: "10px",
+          transition: "background-color 0.3s"
         }}
-        onMouseOver={(e) => (e.target.style.backgroundColor = "#2980b9")} // Darker blue on hover
-        onMouseOut={(e) => (e.target.style.backgroundColor = "#3498db")} // Original color on mouse out
+        onMouseOver={(e) => (e.target.style.backgroundColor = "#0f2b19")}
+        onMouseOut={(e) => (e.target.style.backgroundColor = "#1a472a")}
       >
         Download Image
       </button>
